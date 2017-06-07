@@ -73,7 +73,7 @@ open class SwiftHSVColorPicker: UIView, ColorWheelDelegate, BrightnessViewDelega
         self.addSubview(brightnessView)
     }
     
-    func hueAndSaturationSelected(_ hue: CGFloat, saturation: CGFloat) {
+    open func hueAndSaturationSelected(_ hue: CGFloat, saturation: CGFloat) {
         self.hue = hue
         self.saturation = saturation
         self.color = UIColor(hue: self.hue, saturation: self.saturation, brightness: self.brightness, alpha: 1.0)
@@ -81,7 +81,7 @@ open class SwiftHSVColorPicker: UIView, ColorWheelDelegate, BrightnessViewDelega
         selectedColorView.setViewColor(self.color)
     }
     
-    func brightnessSelected(_ brightness: CGFloat) {
+    open func brightnessSelected(_ brightness: CGFloat) {
         self.brightness = brightness
         self.color = UIColor(hue: self.hue, saturation: self.saturation, brightness: self.brightness, alpha: 1.0)
         colorWheel.setViewBrightness(brightness)
